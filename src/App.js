@@ -11,6 +11,7 @@ export default function App() {
   };
   return (
     <div className="main">
+      <input type="text" value=""/>
       <img
         onClick={() => setIsEnable(!isEnable)}
         className="colorpicker_img"

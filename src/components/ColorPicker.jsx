@@ -24,7 +24,7 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
       <div className="colors_box">
         <div className="colors">
           <input
-            type="text"
+            type="hidden"
             placeholder="Selected Color"
             name="hood-rgb-color"
             value={inputColor}
@@ -36,19 +36,21 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
             className="search_input"
           />
           <span style={{ backgroundColor: color }} id="selectedcolor"></span>
-          {filteredColors.map((c, i) => {
-            return (
-              <div
-                key={i}
-                onClick={() => {
-                  setColor(c.colorCode);
-                  inputBGColor(c.colorCode);
-                }}
-                style={{ background: c.colorCode }}
-                className="single_color"
-              ></div>
-            );
-          })}
+            <div className="single-color-list">
+              {filteredColors.map((c, i) => {
+                return (
+                  <div
+                    key={i}
+                    onClick={() => {
+                      setColor(c.colorCode);
+                      inputBGColor(c.colorCode);
+                    }}
+                    style={{ background: c.colorCode }}
+                    className="single_color"
+                  ></div>
+                );
+              })}
+          </div>
         </div>
       </div>
     </>

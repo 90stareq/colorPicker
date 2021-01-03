@@ -1,42 +1,60 @@
 img.colorpicker_img {
-  width: 50px;
-  display: block;
+  width: 32px;
 }
-
-.colors {
-  display: flex;
-  background: rgb(238, 238, 238);
-  padding: 7px 4px;
-  width: 216px;
-  flex-wrap: wrap;
-  margin-top: 6px;
-  max-height: 250px;
-  overflow: auto;
+.color-position .main{
+  text-align: right;
 }
-
-.single_color {
-  width: 19px;
-  height: 19px;
-  margin-right: 1px;
-  border: 1px solid white;
-  cursor: pointer;
+.colors{
+  display:flex;
+  background:#eee;
+  padding:7px 4px;
+  width:200px;
+  flex-wrap:wrap;
+  margin-top:6px
+}
+.single_color{
+  width: 27px;
+  height: 24px;
+  margin-right:1px;
+  border:1px solid #fff;
+  cursor:pointer
+}
+.colors_box{
+  display:inline-block
 }
 .colors_box {
   display: inline-block;
 }
-
-input.search_input {
-  width: 80%;
-  border: none;
-  margin-bottom: 6px;
-  padding: 5px;
-  font-weight: bold;
-  outline: none;
+input.search_input{
+  width:74%;
+  border:none;
+  margin-bottom:6px;
+  padding:5px;
+  font-weight:700;
+  outline:none
+}
+#selectedcolor{
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  margin-left: 4px;
+}
+.woocommerce div.product form.cart{
+  position: relative !important;
+}
+.color-position {
+  position: absolute !important;
+  top: 46px;
+  right: -10px;
+  width: 200px !important;
+  z-index: 9999;
 }
 
-#selectedcolor {
-  width: 26px;
-  height: 25px;
-  background: #fff;
-  margin-left: 2px;
+.single-color-list{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    margin-top: 10px;
 }
