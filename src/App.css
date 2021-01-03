@@ -1,0 +1,42 @@
+img.colorpicker_img {
+  width: 50px;
+  display: block;
+}
+
+.colors {
+  display: flex;
+  background: rgb(238, 238, 238);
+  padding: 7px 4px;
+  width: 216px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.single_color {
+  width: 19px;
+  height: 19px;
+  margin-right: 1px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.colors_box {
+  display: inline-block;
+}
+
+input.search_input {
+  width: 80%;
+  border: none;
+  margin-bottom: 6px;
+  padding: 5px;
+  font-weight: bold;
+  outline: none;
+}
+
+#selectedcolor {
+  width: 26px;
+  height: 25px;
+  background: #fff;
+  margin-left: 2px;
+}
