@@ -6,9 +6,11 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
   const [color, setColor] = useState("");
   const [search, setSearch] = useState("");
   const [filteredColors, setFilteredColors] = useState([]);
+  const [nexttoSearch, setnexttoSearch] = useState(inputColor);
 
   useEffect(() => {
     setColors(colorslist);
+    setnexttoSearch(inputColor);
   }, []);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
             type="hidden"
             placeholder="Selected Color"
             name="hood-rgb-color"
-            value={inputColor}
+            value={nexttoSearch}
           />
           <input
             type="text"
@@ -36,20 +38,20 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
             className="search_input"
           />
           <span style={{ backgroundColor: color }} id="selectedcolor"></span>
-            <div className="single-color-list">
-              {filteredColors.map((c, i) => {
-                return (
-                  <div
-                    key={i}
-                    onClick={() => {
-                      setColor(c.colorCode);
-                      inputBGColor(c.colorCode);
-                    }}
-                    style={{ background: c.colorCode }}
-                    className="single_color"
-                  ></div>
-                );
-              })}
+          <div className="single-color-list">
+            {filteredColors.map((c, i) => {
+              return (
+                <div
+                  key={i}
+                  onClick={() => {
+                    setColor(c.colorCode);
+                    inputBGColor(c.colorCode);
+                  }}
+                  style={{ background: c.colorCode }}
+                  className="single_color"
+                ></div>
+              );
+            })}
           </div>
         </div>
       </div>
