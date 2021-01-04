@@ -11,22 +11,13 @@ export default function App() {
   };
   return (
     <div className="main">
-      <input type="hidden" value={inputColor} />
-      {inputColor ? (
-        <div
-          onClick={() => setIsEnable(!isEnable)}
-          className="colorpicker_bg"
-          style={{ background: inputColor }}
-        ></div>
-      ) : (
-        <img
-          onClick={() => setIsEnable(!isEnable)}
-          className="colorpicker_img"
-          src={ColorPickerImg}
-          alt=""
-        />
-      )}
-
+      <input type="text" value={inputColor} name="hood-rgb-color" />
+      <img
+        onClick={() => setIsEnable(!isEnable)}
+        className="colorpicker_img"
+        src={ColorPickerImg}
+        alt=""
+      />
       {isEnable ? (
         <ColorPicker inputColor={inputColor} inputBGColor={inputBGColor} />
       ) : null}

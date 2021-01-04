@@ -26,18 +26,15 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
       <div className="colors_box">
         <div className="colors">
           <input
-            type="hidden"
-            placeholder="Selected Color"
-            name="hood-rgb-color"
-            value={nexttoSearch}
-          />
-          <input
             type="text"
             placeholder="Search Bar"
             onChange={(e) => setSearch(e.target.value)}
             className="search_input"
           />
-          <span style={{ backgroundColor: color }} id="selectedcolor"></span>
+          <span
+            style={{ backgroundColor: inputColor }}
+            id="selectedcolor"
+          ></span>
           <div className="single-color-list">
             {filteredColors.map((c, i) => {
               return (
