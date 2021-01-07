@@ -64,3 +64,9 @@ input.search_input {
   height: 32px;
   border-radius: 50%;
 }
+
+.input_bg_color {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}

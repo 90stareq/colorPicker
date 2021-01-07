@@ -42,7 +42,7 @@ export default function ColorPicker({ inputColor, inputBGColor }) {
                   key={i}
                   onClick={() => {
                     setColor(c.colorCode);
-                    inputBGColor(c.colorCode);
+                    inputBGColor(c.colorCode, c.colorName);
                   }}
                   style={{ background: c.colorCode }}
                   className="single_color"
