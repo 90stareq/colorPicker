@@ -70,3 +70,11 @@ input.search_input {
   width: 30px;
   border-radius: 50%;
 }
+li.variable-item {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.nn {
+  background: red;
+}

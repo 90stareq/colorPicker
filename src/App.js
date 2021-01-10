@@ -18,20 +18,28 @@ export default function App() {
     <div className="main">
       <input type="text" value={inputColor} name="hood-rgb-color" />
       <input type="text" value={colorName} name="hood-rgb-name" />
-      {inputColor ? (
-        <div
-          className="input_bg_color color-variable-item-z-sherwin-color"
-          style={{ background: inputColor }}
-          onClick={() => setIsEnable(!isEnable)}
-        ></div>
-      ) : (
-        <img
-          onClick={() => setIsEnable(!isEnable)}
-          className="colorpicker_img color-variable-item-z-sherwin-color"
-          src={ColorPickerImg}
-          alt=""
-        />
-      )}
+
+      <li
+        onClick={() => setIsEnable(!isEnable)}
+        data-wvstooltip="Antique White"
+        className="variable-item color-variable-item color-variable-item-antique-white newli"
+        title="Antique White"
+        data-value="antique-white"
+        role="button"
+        tabindex="0"
+        style={{ background: inputColor }}
+      >
+        {inputColor ? (
+          <span className="variable-item-span variable-item-span-color"></span>
+        ) : (
+          <img
+            onClick={() => setIsEnable(!isEnable)}
+            className="colorpicker_img"
+            src={ColorPickerImg}
+            alt=""
+          />
+        )}
+      </li>
 
       {isEnable ? (
         <ColorPicker inputColor={inputColor} inputBGColor={inputBGColor} />
