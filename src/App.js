@@ -51,7 +51,7 @@ export default function App() {
         <div className="colors">
           <input
             type="text"
-            placeholder="Search Bar"
+            placeholder={`${colorName ? colorName : "Search Bar"}`}
             onChange={(e) => setSearch(e.target.value)}
             className="search_input"
           />
@@ -62,8 +62,9 @@ export default function App() {
                 <div
                   key={i}
                   onClick={() => {
+                    console.log(c.colorName.slice(8));
                     setColor(c.colorCode);
-                    setcolorName(c.colorName);
+                    setcolorName(c.colorName.slice(8));
                   }}
                   style={{ background: c.colorCode }}
                   className="single_color"
